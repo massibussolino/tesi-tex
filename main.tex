@@ -1,0 +1,67 @@
+\documentclass[12pt, twoside]{book}
+\input{ConfigurationFiles/packages.tex}
+\input{ConfigurationFiles/settings.tex}
+
+
+\begin{document}
+\pagestyle{empty}
+\input{Chapters/TitelPage.tex}
+\cleardoublepage
+
+
+\include{Chapters/Abstract}
+%\cleardoublepage
+\include{Chapters/Sommario}
+
+\chapter*{Ringraziamenti}
+\thispagestyle{empty}
+Vorrei ringraziare la Professoressa Michèle Lavagna per avermi dato l’opportunità di lavorare a questa tesi e per avermi convolto in progetti ed esperienze fondamentali per la definizione del mio futuro. Inoltre, ci tengo a ringraziare Gaia e Margherita per la disponibilità e il supporto di questi mesi, permettendomi di svolgere il lavoro sempre con sicurezza e serenità.
+
+Un ringraziamento sincero va a mia madre e a mio padre, la cui cieca fiducia nonostante la mia riservatezza è da sempre la base fondante dei risultatiti ottenuti. A mia sorella che, quando con l’esempio e quando con la motivazione, mi ha sempre spinto, e sempre mi spingerà, a un di più che mai avrei raggiunto da solo.\\
+A Claudia, per avermi sempre sostenuto, per riordinarmi i pensieri quando tutto sembra confuso.
+
+Grazie infine a tutti coloro che hanno condiviso con me questo percorso, rendendo memorabili i momenti piacevoli e leggeri quelli difficili; per esserci sempre stimolati senza mai competere.
+
+
+
+\cleardoublepage
+
+\pagenumbering{roman}
+\tableofcontents
+\pagestyle{contents}
+
+
+\listoffigures
+\pagestyle{figures}
+\addcontentsline{toc}{chapter}{List of Figures}
+\newpage
+
+\listoftables
+\pagestyle{tables}
+\addcontentsline{toc}{chapter}{list of Tables}
+\newpage
+
+\listofalgorithms
+\pagestyle{algo}
+\addcontentsline{toc}{chapter}{List of Algorithms}
+\newpage 
+
+\printglossary[type=\acronymtype,nonumberlist,title={List of Acronyms},nogroupskip]
+\pagestyle{acro}
+\addcontentsline{toc}{chapter}{List of Acronyms}
+\newpage
+\cleardoublepage
+
+\pagenumbering{arabic}
+\pagestyle{generic}
+\include{Chapters/Introduction.tex}
+\include{Chapters/background.tex}
+\include{Chapters/NavigationFilter.tex}
+\include{Chapters/TestingFramework}
+\include{Chapters/NumericalSimulations}
+\include{Chapters/conclusion}
+\pagestyle{biblio}
+\printbibliography
+\addcontentsline{toc}{chapter}{Bibliography}
+%\pagestyle{biblio}
+\end{document}
